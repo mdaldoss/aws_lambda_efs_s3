@@ -22,32 +22,32 @@ In AWS console search EFS.
 Select create.
 After creating your EFS:
 -> press "Access point" and create one with the following:
-"Root directory path" = "/mnt/your-efs-name" _IMPORTANT!_ -> This will be your mount point on your aws lambda too!
-"User ID" = 1000
-"Group ID" = 1000
-"Root directory creation permissions"
-"Owner user ID" = 1000
-"Owner group ID" = 1000
-"Permissions" = 777 -> or what you prefer
+- "Root directory path" = "/mnt/your-efs-name" _IMPORTANT!_ -> This will be your mount point on your aws lambda too!
+- "User ID" = 1000
+- "Group ID" = 1000
+- "Root directory creation permissions"
+- "Owner user ID" = 1000
+- "Owner group ID" = 1000
+- "Permissions" = 777 -> or what you prefer
 
 ### 2) Set Enpoint to S3 Storage
 In AWS console, go to *VPC*
 - then select at the menu on the left *endopoint*
-- &nbsp Create Endpoint
-- &nbsp&nbsp Service Category: AWS Services
-- &nbsp&nbsp In "Service name" search for: "S3 GATEWAY"
-- &nbsp&nbsp Choose "Full acccess"
-- &nbsp&nbsp In "Configure route tables" select your subnets
-- &nbsp&nbsp Press "Create Endpoint"
+-   Create Endpoint
+-      Service Category: AWS Services
+-      In "Service name" search for: "S3 GATEWAY"
+-      Choose "Full acccess"
+-      In "Configure route tables" select your subnets
+-      Press "Create Endpoint"
   
  (reference https://aws.amazon.com/blogs/aws/new-vpc-endpoint-for-amazon-s3/)
  
 ### 3) EFS mount point
 In your lambda select
 - Configuration
-  -> File system
-    -> Select your Access point
-    -> Set your "Local mount path" the same as the one you set in the EFS Access point!
+-    File system
+-      Select your Access point
+-      Set your "Local mount path" the same as the one you set in the EFS Access point!
     
 ### 4) CODE
 Enjoy!
