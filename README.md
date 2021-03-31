@@ -33,12 +33,12 @@ After creating your EFS:
 ### 2) Set Enpoint to S3 Storage
 In AWS console, go to *VPC*
 - then select at the menu on the left *endopoint*
-  -> Create Endpoint
-  -> Service Category: AWS Services
-  -> In "Service name" search for: "S3 GATEWAY"
-  -> Choose "Full acccess"
-  -> In "Configure route tables" select your subnets
-  -> Press "Create Endpoint"
+-- Create Endpoint
+--- Service Category: AWS Services
+--- In "Service name" search for: "S3 GATEWAY"
+--- Choose "Full acccess"
+--- In "Configure route tables" select your subnets
+--- Press "Create Endpoint"
   
  (reference https://aws.amazon.com/blogs/aws/new-vpc-endpoint-for-amazon-s3/)
  
