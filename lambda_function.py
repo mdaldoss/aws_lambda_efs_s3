@@ -7,6 +7,7 @@ import sys
 from s3_api import *
 
 BUCKET_NAME = "my_s3_bucket_name"
+EFS_FOLDER = "/mnt/efs3/"
 
 def download_layer(bucket_name, filename, layer_name):
     """ 
@@ -17,7 +18,7 @@ def download_layer(bucket_name, filename, layer_name):
     """
     
     # Specify the EFS folder where to save the files once downloaded
-    project_folder = '/mnt/efs1/{0!s}'.format(layer_name)
+    project_folder = EFS_FOLDER + '{0!s}'.format(layer_name)
 
     if not os.path.isdir(project_folder):
         session = aws_session()
